@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 
 // Importá estos componentes una vez que los crees
 import Dashboard from "./pages/Dashboard";
+import Register from "./pages/Register";
 // import Duelo from './pages/Duelo';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
+        <Route path="registro" element={<Register />} />
 
         <Route element={<Layout />}>
           {/* Descomentá estas rutas cuando tengas los archivos creados */}

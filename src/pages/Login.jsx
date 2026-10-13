@@ -1,19 +1,23 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Redirección simulada al dashboard
     navigate("/dashboard");
   };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-100">
+    <div className="min-h-screen flex items-center justify-center bg-slate-100 p-4">
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-slate-800">Iniciar Sesión</h2>
-          <p className="text-slate-500 mt-2">Accede a tu panel de S.A.P.E.</p>
+          <h2 className="text-3xl font-bold text-slate-800">
+            Iniciar Sesión
+          </h2>
+          <p className="text-slate-500 mt-2">
+            Accede a tu panel de S.A.P.E.
+          </p>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-6">
@@ -48,6 +52,16 @@ const Login = () => {
             Ingresar
           </button>
         </form>
+
+        <p className="text-center text-sm text-slate-500 mt-6">
+          ¿No tenés una cuenta?{" "}
+          <Link
+            to="/registro"
+            className="font-semibold text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+          >
+            Registrate
+          </Link>
+        </p>
       </div>
     </div>
   );
